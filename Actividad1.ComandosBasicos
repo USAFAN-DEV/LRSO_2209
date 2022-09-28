@@ -1,6 +1,34 @@
-#Iniciamos nuestra maquina virtual#
-#Primero vamos a nuestro directorio de trabajo, y luego creamos el nuevo directorio# cd U-tad ; mkdir MisPruebas
-#Ahora tenemos que crear un directorio dentro de MisPruebas desde U-tad# mkdir -p MisPruebas/Mis_documentos
-cd /home/usafan/U-tad/MisPruebas/Mis_documentos
-cd ~
-cd U-tad/MisPruebas/Mis_documentos
+1. #Iniciamos nuestra maquina virtual#
+2. #Primero vamos a nuestro directorio de trabajo, y luego creamos el nuevo directorio# cd U-tad ; mkdir MisPruebas
+3. #Ahora tenemos que crear un directorio dentro de MisPruebas desde U-tad# mkdir -p MisPruebas/Mis_documentos
+4. cd /home/usafan/U-tad/MisPruebas/Mis_documentos
+5. cd ~
+6. cd U-tad/MisPruebas/Mis_documentos
+7. cd .. 
+8. cd Mis_documentos ; mkdir Mis_enlaces
+9. touch doc_1.txt
+10. cd Mis_enlaces ; ln -s doc_1.txt enlacetext
+11. cp /var/log/syslog Mis_documentos; cd Mis_documentos ; mv syslog my_syslog
+12. cd Mis_enlaces ; ln -s my_syslog mi_link_a_syslog
+13. cd ../.. ; ls -R -la
+14. Letras: El primer caracter indica el tipo de documento, los siguientes tres carácteres se refieren al propietario del fichero y te dicen que derechos tiene sobre este
+    (read, write, execute). Los siguientes tres carácteres se refieren al grupo y a sus derechos. Los últimos tres carácteres se refieren a cualquier usuario. El número 
+    siguiente nos dice cuantos subelementos contiene el subdirectorio. El número despues del usuario y el grupo nos dice el tamaño en bytes del archivo. Por último esta
+    la fecha de creación y el nombre del directorio
+15. cd 
+16. mkdir MisFicheros
+17. cd MisFicheros; touch Fichero_1.txt Fichero_22.txt Fichero_333.txt ; echo "Hola Mundo">Fichero_1.txt ; echo "estoy usando Linux">Fichero_22.txt ; 
+echo "y practicando los primeros comandos">Fichero_333.txt
+18. cat Fichero_1.txt ; cat Fichero_22.txt ; car Fichero_333.txt
+19. cat *txt
+20. cp Fichero_1.txt fichero1.txt
+21. mv Fichero_22.txt Mi_fichero22.txt
+22. touch BACKUP.5 BACKUP.66 BACKUP.777
+23. ls -l
+24. ls may* ; ls min* ; ls [MF]* ; ls Fichero??.txt ; ls BACKUP. [[:digit:]][[:digit:]]
+25. cd; ls -l
+26. cp -r MisFicheros U-tad/MisPRuebas/MisFicheros2
+27 cd MisFicheros2
+28. tar cvf Backups.tar BACKUP*
+29. tar cvzf Backups_compress1.tgz BACKUP*
+30. tar cvjf Backups_compress2.bz2 BACKUP*
