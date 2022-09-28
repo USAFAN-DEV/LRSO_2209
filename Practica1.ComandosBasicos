@@ -1,0 +1,3 @@
+#Iniciamos nuestra maquina virtual#
+#Primero vamos a nuestro directorio de trabajo, y luego creamos el nuevo directorio# cd U-tad ; mkdir MisPruebas
+#Ahora tenemos que crear un directorio dentro de MisPruebas desde U-tad# mkdir -p MisPruebas/Mis_documentos
