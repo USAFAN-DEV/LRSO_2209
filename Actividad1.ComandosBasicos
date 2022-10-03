@@ -4,7 +4,7 @@
 4. cd /home/usafan/U-tad/MisPruebas/Mis_documentos
 5. cd ~
 6. cd U-tad/MisPruebas/Mis_documentos
-7. cd .. 
+7. cd ../../..
 8. cd Mis_documentos ; mkdir Mis_enlaces
 9. touch doc_1.txt
 10. cd Mis_enlaces ; ln -s doc_1.txt enlacetext
