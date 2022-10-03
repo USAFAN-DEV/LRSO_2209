@@ -1,0 +1,9 @@
+1. cd ~ : mkdir dir_prueba
+2. cd dir_prueba
+3 y 4.  cp /etc/profile mi_fichero_profile.txt
+5. touch prueba.txt
+6. cat mi_fichero_profile.txt > prueba.txt
+7. head -n10 prueba.txt
+8.
+
+
