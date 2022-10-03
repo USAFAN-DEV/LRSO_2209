@@ -9,8 +9,8 @@
 9. touch doc_1.txt
 10. cd Mis_enlaces ; ln -s ~/U-tad/MisPruebas/Mis_documentos/doc_1.txt enlacetext
 11. cp /var/log/syslog Mis_documentos; cd Mis_documentos ; mv syslog my_syslog
-12. cd Mis_enlaces ; ln -s my_syslog mi_link_a_syslog
-13. cd ../.. ; ls -R -la
+12. cd Mis_enlaces ; ln -s ~/U-tad/MisPruebas/Mis_documentos/my_syslog mi_link_a_syslog
+13. cd ../.. ; ls -laR
 14. Letras: El primer caracter indica el tipo de documento, los siguientes tres carácteres se refieren al propietario del fichero y te dicen que derechos tiene sobre este
     (read, write, execute). Los siguientes tres carácteres se refieren al grupo y a sus derechos. Los últimos tres carácteres se refieren a cualquier usuario. El número 
     siguiente nos dice cuantos subelementos contiene el subdirectorio. El número despues del usuario y el grupo nos dice el tamaño en bytes del archivo. Por último esta
@@ -25,9 +25,9 @@ echo "y practicando los primeros comandos">Fichero_333.txt
 21. mv Fichero_22.txt Mi_fichero22.txt
 22. touch BACKUP.5 BACKUP.66 BACKUP.777
 23. ls -l
-24. ls may* ; ls min* ; ls [MF]* ; ls Fichero??.txt ; ls BACKUP. [[:digit:]][[:digit:]]
+24. ls [[:upper:]]* ; ls [[:lower:]]* ; ls [M,F]* ; ls Fichero??.txt ; ls BACKUP. [[:digit:]][[:digit:]]
 25. cd; ls -l
-26. cp -r MisFicheros U-tad/MisPRuebas/MisFicheros2
+26. cp -r MisFicheros U-tad/MisPruebas/MisFicheros2
 27 cd MisFicheros2
 28. tar cvf Backups.tar BACKUP*
 29. tar cvzf Backups_compress1.tgz BACKUP*
