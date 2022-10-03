@@ -4,6 +4,7 @@
 5. touch prueba.txt
 6. cat mi_fichero_profile.txt > prueba.txt
 7. head -n10 prueba.txt
-8.
+8. ln -s /~/U-tad/MisScripts/dir_prueba/mi_fichero_profile.txt link_profile
+
 
 
