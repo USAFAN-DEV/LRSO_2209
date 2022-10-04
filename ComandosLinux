@@ -1,0 +1,137 @@
+cd: para ir a un directorio
+  cd / para ir al directorio raíz
+  cd ~ para ir al directorio home
+  cd . para ir al directorio actual
+  cd .. para ir al directorio anterior
+  
+pwd: te dice donde estas situado actualmente
+
+ls: lista todos los archivos que hay dentro del directorio
+  ls -l: te da una serie de datos sobre tus ficheros. La primera letra te dice que tipo de archivo es, las tres siguientes los permisos que tiene el propietario
+         del archivo rwx (read, write, execute), las tres siguientes los permisos que tiene el grupo, y las tres siguientes los permisos que tiene cualquier usuario del 
+         sistema. El numero te indica cuantos subelementos tiene el directorio. Despues viene el usuario y el grupo, el tamaño en bytes, la fecha de creación y el nombre
+         del directorio
+  ls -a: te muestra también los ficheros ocultos (estos empiezan con un punto)
+  ls -R: te muestra tanto los archivos del directorio, como los archivos de los subdirectorios
+  Podemos juntar los 3: ls -alR 
+
+clear: para limpiar la terminal
+
+history: te muestra el historial de los comandos que has ejecutado
+
+file: te dice que tipo de archivo es 
+  file text.txt
+  file /home/usafan/U-tad/text.txt
+
+type: para darle otro nombre a un comando que te sea más fácil de recordar
+
+which: te muestra la ruta/PATH para llegar a un archivo
+
+echo: muestra algo
+  echo $PATH: muestra el PATH
+  echo "......" > text.txt: para escribir algo dentro de un fichero (sobreponiendolo sobre lo ya escrito)
+  echo "......" >> text.txt: para escribir algo dentro de un fichero manteniendo lo ya escrito anteriormente
+  echo "......": muestra texto
+
+printenv: te muestra todas las variables del S.O.
+  printenv <variableentorno>: para ver una variable del S.O.
+
+cat <fichero>: para ver lo que hay escrito en un fichero
+  cat <fichero1> > <fichero2>: para pasar el contenido de un fichero a otro
+  cat <fichero1> >> <fichero2>: para pasar el contenido de un fichero a otro, manteniedo lo que ya tenia escrito este
+  
+man <comando>: manual de ese comando
+
+mkdir <nombredirectorio>: para crear un directorio
+  mkdir -p nuevodirectorio/nuevodirectorio2/nuevodirectorio3: para crear un directorio y sus subdirectorios con un solo comando
+  
+rmdir <nombredirectorio>: para borrar un directorio vacio
+  rm -r <nombredirectorio>: para borrar un directorio y sus archivos
+  rm <nombrefichero>: para borrar un fichero
+  
+touch <nombrefichero>: para crear un fichero
+
+tail -n10 <nombrefichero>: te muestra las 10 ultimas lineas de un fichero
+head -n10 <nombrefichero>: te muestra las 10 primeras lineas de un fichero
+
+ln /s <destino (a donde te llevara el enlace)> <nombre_enlace>: para crear un enlace simbolico
+
+patrones para seleccionar archivos
+  b*: selecciona los archivos que empiezan con la letra b
+  b*.txt: selecciona los archivos .txt que empiezan con la letra b
+  Data???: selecciona los archivos que empezan con Data y tienen 3 caracteres mas
+  [a,b,c]*: selecciona los archivos que empiezan por la a, la b o la c
+  [:upper:]*: selecciona los archivos que empiezan con mayuscula
+  [:lower:]*: selecciona los archivos que empiezan con minuscula
+  BACKUP.[[:digit:]][[:digit:]]: selecciona los archivos que empiezan por BACKUP. seguidos de dos digitos
+
+cp <origen><destino>: para copiar ficheros
+  cp /etc/profile U-tad: copiar profile al directorio U-tad
+  cp /etc/profile U-tad/my_profile.txt: copiar profile al directorio U-tad con otro nombre
+  cp -R <directorio1> <directorio2>: para copiar el directorio1 y todo su contenido en el directorio 2
+
+mv plato.txt plato1.txt: para renombrar un fichero
+mv <nombrefichero> <nombredirectorio>: para mover un fichero a un directorio
+mv <nombredirectorio> <nombreotrodirectorio>: para mover un directorio a otro directorio
+
+Empaquetar
+tar cvf misficheros.tar <nombredelosficheros>: para empaquetar varios ficheros en un archivo .tar
+  tar xvf misficheros.tar: extraer el contenido de un .tar
+
+Comprimir
+tar cvzf misficheros_comprimidos.tgz <nombredelosficheros>: comprimir archivos usando gzip
+  tar cvzf mi_directorio_comprimido.tgz <nombredirectorio>: comprimir un directorio usando gzip
+  tar xvzf misficheros_comprimidos.tgz: extraer el contenido de un .tgz
+  
+tar cvjf mi_fichero_comprimido2.bz2 <nombrefichero>: comprimir archivos usando bzip. tambien se pueden comprimir directorios
+  tar xvjf mi_fichero_comprimido.bz2: extraer el contenido de un .bz2
+ 
+tar tvf misficheros.tar: listar el contenido de un fichero tar
+
+gzip <nombrefichero>: convertir a un fichero en un archivo zip
+gunzip <nombrearchivozip>: para descomprimir un archivo zip
+
+bzip2 <nombrefichero>: convertir a un fichero en un archivo zip
+bunzip2 <nombrefichero>: para descomprimir un archivo zip
+
+SCRIPTS
+nano file.sh: entramos al editor de texto
+  empezamos siempre con #!/bin/bash
+  para dar permisos de ejecucion a un script usamos chmod +x file.sh
+  para ejecutar un script ./file.sh
+  
+SUBIR ALGO A GITHUB
+git add.
+git commit /m "titulo"
+git push
+
+ACTUALIZAR REPO EN LINUX
+git pull
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
