@@ -4,7 +4,7 @@
 5. touch prueba.txt
 6. cat mi_fichero_profile.txt > prueba.txt
 7. head -n10 prueba.txt
-8. ln -s /~/U-tad/MisScripts/dir_prueba/mi_fichero_profile.txt link_profile
+8. ln -s mi_fichero_profile.txt link_profile
 9. echo "vamos a listar todos los ficheros que contiene el directorio: "dir_prueba""
 10. #Estando en el directorio dir_prueba# ls -alR
 
@@ -15,13 +15,13 @@
 3.
 4. nano script.sh ; 
 #!/bin/bash
-mkdir /~/U-tad/nuevo_directorio
-cd U-tad/nuevo_directorio
-cp /etc/profile/mi_fichero_profile.txt nuevo_directorio
+mkdir nuevo_directorio
+cd nuevo_directorio
+cp /etc/profile ./mi_fichero_profile.txt 
 touch prueba.txt
 cat mi_fichero_profile.txt > prueba.txt
 head -n10 prueba.txt
-ln -s /~/U-tad/nuevo_directorio/mi_fichero_profile.txt link_profile
+ln -s mi_fichero_profile link_profile
 echo "vamos a listar todos los ficheros que contiene el directorio: "dir_prueba""
 ls -alR
 5. ctrl o ; ctrl x
