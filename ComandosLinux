@@ -108,10 +108,74 @@ git push
 ACTUALIZAR REPO EN LINUX
 git pull
   
+date: fecha
+date+"%Y": año (2022)
+date + "%m": mes 
+date + "%d" : dia
+date + "%y" : año (22)
+date = "%d-%m-%Y": 18-10-2022
+"%H:%M:%S" : hora
 
+cal: calendario
+cal -m12: diciembre
+cal -y 2021: calendario 2021
+timedatectl: hora de la placa base
+timedatectl list-timezones: listado todas las zonas horararias
+timedatectl list-timezones | grep -i "Europe": zonas horarias europa. con el -i da igual que usemos mayusculas o minusculas
 
+systemctl: estado del sistema
+  status, start, stop (atributos)
+con | podemos concatenar diferentes comandos
 
+history | grep "tail" : comandos con la palabra tail 
 
+Comando grep: 2 parametros
+
+grep patron fichero
+grep usafan etc/group: buscame dentro de etc/group todas las entradas que tengan dicho patron (usafan)
+-i para no tener en cuenta mayusculas o minusculas
+-n para ver el numero de las lineas en las que se encuentra el patron
+-c para ver en cuantas lineas aparece
+-v para ver las lineas que no tienen el patron
+-e para expresiones regulares (grep -e "di*") todas las palabras que empiecen por d o por di y n de su linea
+grep "^diego" : lienas que empiecen por diego
+grep -r "diego" *: para buscar en que ficheros esta la palabra diego
+
+cat fichero| grep "palabra"
+cat /etc/group | grep "diego" lineas en la que sale la palabra diego en el fichero mencionado
+
+ps: ver procesos que estas realizando
+ps u: informacion de usuario extendida
+ps aux: informacion de todos los usuarios. Primera columna: usuario que ha lanzado el servicio. Segunda columna: pid
+
+ps aux | grep "proceso"
+kill pid : matar proceso
+
+find . / ~ /etc
+  -name.txt: find ~ -name "name*": te busca en tu home x fichero
+  find ~ /type d /name name*": encuentra los directorios que empiecen por name
+  find ~ -empty: encuentra ficheros vacios en home
+  -executables: para ejecutables
+  -readable: para leeibles
+  
+Dar permisos ( enmascaramiento binario)
+si al ususario le queremos dar todos los permisos (7)
+si al grupo queremos darle los dos primeros (3)
+si a todos los usuarios queremos darle el de ejecucion y el de lectura (6)
+chmod 754 <fichero al que quieres dar permisos>, quedaria rwx-wxr-x
+
+find ~ -empty
+
+awk 
+echo "1) John  Maths 6.54">notes.txt
+echo "2) Paul  Physiscs 8.23">>notes.txt
+echo "3) Michael Biology 7.98">>notes.txt
+
+awk '{print}' notes.txt
+awk /Phy/ '{print}' notes.tx: solo se imprimen las lineas que tienen Phy 
+
+awk '{print $1}' notes.txt: imprime el primer caracter de casa linea
+awk '{print $2"\t\t"$3}' notes.txt: imprime el 2 y 3 elementos.
 
 
 
