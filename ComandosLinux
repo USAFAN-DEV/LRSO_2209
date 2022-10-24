@@ -162,7 +162,7 @@ Dar permisos ( enmascaramiento binario)
 si al ususario le queremos dar todos los permisos (7)
 si al grupo queremos darle los dos primeros (3)
 si a todos los usuarios queremos darle el de ejecucion y el de lectura (6)
-chmod 754 <fichero al que quieres dar permisos>, quedaria rwx-wxr-x
+chmod 736 <fichero al que quieres dar permisos>, quedaria rwx-wxr-x
 
 find ~ -empty
 
