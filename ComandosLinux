@@ -178,6 +178,14 @@ awk '{print $1}' notes.txt: imprime el primer caracter de casa linea
 awk '{print $2"\t\t"$3}' notes.txt: imprime el 2 y 3 elementos.
 
 
+sed
+
+sed 's/patroninicial/patronfinal/g' fichero1
+                                   <fichero1>fichero2
+Cambia una palabra por otra (patron inicial por patron finala)
+si queremos que cambie todos los, por ejemplo, holas, hay que poner g al final de las comillas, sino solo nos cambiaria un hola por el patron final, solo uno
+-i si queremos que los cambios se produzcan en el fichero original
+si no ponemos la -i, solo se muestra por pantalla el cambio
 
 
 
